@@ -1,0 +1,42 @@
+body {
+ background-color: #CCC;
+}
+
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-image:url("download.jpg");
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax__layer--base {
+  background-color: #00F;
+  height: 200px;
+  transform: translateZ(0);
+}
+
+.parallax__layer--back {
+  background-image:url("tt.jpg");
+  height: 400px;
+  transform: translateZ(-1px) scale(2)
+}
+
+
+.parallax__layer--deep {
+  transform: translateZ(-2px) scale(3);
+}
+
+.parallax__group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
